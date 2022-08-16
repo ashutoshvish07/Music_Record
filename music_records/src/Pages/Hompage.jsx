@@ -19,18 +19,18 @@ export default Hompage;
 
 const HomeWrapper = styled.div`
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   width: 90%;
   margin: auto;
 `;
 
 const Filter = styled.div`
   width: 25%;
-  margin: auto;
+
   border: 1px solid cyan;
 `;
 const Music = styled.div`
   width: 74%;
-  margin: auto;
+ 
   border: 1px solid skyblue;
 `;

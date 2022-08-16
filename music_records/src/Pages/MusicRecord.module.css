@@ -1,0 +1,17 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.record {
+  border: 1px solid red;
+}
+.record > div > h4 {
+  text-align: center;
+}
+.record > div > img {
+  width: 100%;
+  margin: auto;
+}

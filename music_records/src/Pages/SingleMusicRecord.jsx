@@ -13,8 +13,10 @@ const SingleMusicRecord = () => {
   const musicRecords = useSelector((store) => store.AppReducer.musicRecords);
 
   const [currentMusic, setcurrentMusic] = useState({});
-   const {img,name,artist,year,genre,} =currentMusic
+  const { img, name, artist, year, genre } = currentMusic; // destructure from the Current music object so that i can use in props
   useEffect(() => {
+    // this useEffect will not lose the data when user refresh the page
+    // it will remain the same as it was
     if (musicRecords.length === 0) {
       dispatch(getMusicRecord());
     }
@@ -27,25 +29,25 @@ const SingleMusicRecord = () => {
       currentMusicAlbum && setcurrentMusic(currentMusicAlbum);
     }
   }, [id, musicRecords]);
-  console.log(currentMusic);
+  //console.log(currentMusic);
 
   return (
-    <div >
-    <Link to={"/"} >
-      <button>Go Back</button>
-    </Link>
-      <h1 style={{textAlign:'center'}}>Songs Details</h1>
-       <div style={{width :"20%",margin:"auto"}}>
-         <img src={img} />
-         <h3>Artist : <span>{artist}</span></h3>
-         <h4>Song Name : {name}</h4>
-         <p>Song type : {genre}</p>
-          <p>Release Year :{year}</p>
-       </div>
-
+    <div>
+      <Link to={"/"}>
+        <button>Go Back</button>
+      </Link>
+      <h1 style={{ textAlign: "center" }}>Songs Details</h1>
+      <div style={{ width: "20%", margin: "auto" }}>
+        <img src={img} />
+        <h3>
+          Artist : <span>{artist}</span>
+        </h3>
+        <h4>Song Name : {name}</h4>
+        <p>Song type : {genre}</p>
+        <p>Release Year :{year}</p>
+      </div>
     </div>
   );
 };
 
 export default SingleMusicRecord;
-

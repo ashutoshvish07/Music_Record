@@ -17,6 +17,7 @@ const Login = () => {
     e.preventDefault();
     if (email && password) {
       dispatch(login({ email, password })).then((r) => {
+        console.log(r);
         if (r.type === USER_LOGIN_SUCCESS) {
           navigate(comingFrom, { replace: true });
         }

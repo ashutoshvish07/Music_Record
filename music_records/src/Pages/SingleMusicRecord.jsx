@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { getMusicRecord } from "../Redux/AppReducer/action";
-import styled from "styled-Components";
 const SingleMusicRecord = () => {
   // some data in the params
   // get id from the params
@@ -45,6 +44,7 @@ const SingleMusicRecord = () => {
         <h4>Song Name : {name}</h4>
         <p>Song type : {genre}</p>
         <p>Release Year :{year}</p>
+        <Link to={`/music/${id}/edit`}><button>edit</button></Link>
       </div>
     </div>
   );

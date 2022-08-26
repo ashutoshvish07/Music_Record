@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { getMusicRecord } from "../Redux/AppReducer/action";
 import { useSelector, useDispatch } from "react-redux";
-import searchParams from "../Components/FilterSort";
+
 import style from "./MusicRecord.module.css";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 
